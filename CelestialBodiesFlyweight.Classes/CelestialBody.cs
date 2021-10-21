@@ -20,7 +20,7 @@ namespace CelestialBodiesFlyweight.Classes
         }
         public string GetInfo()
         {
-            return $"Nombre:{_name}\nCoordenadas:({_x} UA , {_y} UA)\n{_type.GetInfo()}";
+            return $"nombre: {_name}\ncoordenadas: ({_x} UA , {_y} UA)\n{_type.GetInfo()}";
         }
         public bool CompareType(ICelestialBodyType bodyType)
         {
