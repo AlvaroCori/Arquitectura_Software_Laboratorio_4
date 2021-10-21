@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "CelestialBodiesFlyweight.MainProgram/1.0.0": {
+        "dependencies": {
+          "CelestialBodiesFlyweight.Classes": "1.0.0"
+        },
+        "runtime": {
+          "CelestialBodiesFlyweight.MainProgram.dll": {}
+        }
+      },
+      "CelestialBodiesFlyweight.Classes/1.0.0": {
+        "runtime": {
+          "CelestialBodiesFlyweight.Classes.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CelestialBodiesFlyweight.MainProgram/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CelestialBodiesFlyweight.Classes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
