@@ -15,20 +15,20 @@ namespace CelestialBodiesFlyweight.Classes
             _size = 0;
             _maxSize = elements;
         }
-        private bool InsertCelestialBody(string name, double coordenateX, double coordenateY,ICelestialBodyType typeBody)
+        private bool InsertCelestialBody(string name, double coordenateX, double coordenateY,double coordenateZ,ICelestialBodyType typeBody)
         {
             if (_size<_maxSize)
             {
-                _celestialBodies[_size] = new CelestialBody(typeBody,name, coordenateX, coordenateY);
+                _celestialBodies[_size] = new CelestialBody(typeBody,name, coordenateX, coordenateY, coordenateZ);
                 _size = _size + 1;
                 return true;
             }
             return false;
         }
-        public bool InsertANewCelestialBody(string name, double coordenateX, double coordenateY, string typeCelestialBody, string[] colors)
+        public bool InsertANewCelestialBody(string name, double coordenateX, double coordenateY, double coordenateZ,string typeCelestialBody, string[] colors)
         {
             ICelestialBodyType typeBody = _factory.GetCelestialBodyType(typeCelestialBody, colors);
-            return InsertCelestialBody(name, coordenateX, coordenateY, typeBody);
+            return InsertCelestialBody(name, coordenateX, coordenateY, coordenateZ, typeBody);
         }
         public string GetInformationMap()
         {
