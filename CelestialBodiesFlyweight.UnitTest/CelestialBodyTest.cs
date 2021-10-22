@@ -5,12 +5,8 @@ namespace CelestialBodiesFlyweight.UnitTest
     [TestClass]
     public class CelestialBodyTest
     {
-        /*
-        Este test comprueba la informacion de un cuerpo celestial con su nombre y coordenadas en unidades astronomicas (UA)
-        tambien se agrega la informacion del tipo que compone intrisicamente al cuerpo celestial.
-        */
         [TestMethod]
-        public void TestCelestialBodyTest1()
+        public void TestCelestialBodyInformation()
         {
             string[] colors= {"#0000ff","#ff0000","#00ff00"};
             ICelestialBodyType celestialBodyType = new CelestialBodyType("planeta enano",colors);
@@ -19,12 +15,8 @@ namespace CelestialBodiesFlyweight.UnitTest
             string typeInfo = "objeto: planeta enano\ncolores: #0000ff #ff0000 #00ff00 ";
             Assert.AreEqual(request, "nombre: TY-8\ncoordenadas: (2.4 UA , 4.5 UA , 91.2 UA)\n"+typeInfo);
         }
-        /*
-        Este test comparara el tipo del cuerpo celestial de un celestial body y de uno por referencia
-        para demostrar que apunta al mismo tipo cuerpo celestial.
-        */
         [TestMethod]
-        public void TestCelestialBodyTest2()
+        public void TestCompareCelestialBodyTypeOfACelestialBody()
         {
             string[] colors= {"fff00","#ffff56","#ffff81","#ff9800","#ffc3440","#ffc340"};
             ICelestialBodyType celestialBodyType = new CelestialBodyType("estrella amarilla",colors);
@@ -33,11 +25,8 @@ namespace CelestialBodiesFlyweight.UnitTest
             bool request = celestialBody.CompareType(celestialBodyTypeReference);
             Assert.IsTrue(request);
         }
-        /*
-        Este test comparara 2 objetos celestiales que poseen el mismo tipo de cuerpo celestial.
-        */
         [TestMethod]
-        public void TestCelestialBodyTest3()
+        public void TestCompareTheSameTipeForTwoCelestialBodies()
         {
             string[] colors= {"fff00","#ffff56","#ffff81","#ff9800","#ffc3440","#ffc340"};
             ICelestialBodyType celestialBodyType = new CelestialBodyType("estrella amarilla",colors);
@@ -46,11 +35,8 @@ namespace CelestialBodiesFlyweight.UnitTest
             bool request = celestialBody1.CompareType(celestialBody2);
             Assert.IsTrue(request);
         }
-        /*
-        Este test comparara 2 objetos celestiales que poseen diferente tipo de cuerpo celestial.
-        */
         [TestMethod]
-        public void TestCelestialBodyTest4()
+        public void TestCompareDifferentsTipesForTwoCelestialBodies()
         {
             string[] colors1= {"fff00","#ffff56","#ffff81","#ff9800","#ffc3440","#ffc340"};
             string[] colors2= {"fff00","#ffff56"};

@@ -5,11 +5,8 @@ namespace CelestialBodiesFlyweight.UnitTest
     [TestClass]
     public class CelestialBodyFactoryTest
     {
-        /*
-        Este test comprueba que el nombre del tipo es el mismo que retorna la fabrica.
-        */
         [TestMethod]
-        public void TestFactoryCelestialBodiesTypeTest1()
+        public void TestCompareNameType()
         {
             string[] colors= {"ff0000", "0000ff"};
             CelestialBodiesFactory factory = new CelestialBodiesFactory(new CelestialBodyType[20]);
@@ -19,11 +16,8 @@ namespace CelestialBodiesFlyweight.UnitTest
             bool request = celestialBodyType.CompareType(nameType);
             Assert.IsTrue(request);
         }
-        /*
-        Este test comprueba que la fabrica produce un tipo y devuelve el mismo tipo para 2 planetas.
-        */
         [TestMethod]
-        public void TestFactoryCelestialBodiesTypeTest2()
+        public void TestCompareMedianPlanetWithMedianPlanet()
         {
             string[] colors= {"ff0000", "0000ff"};
             CelestialBodiesFactory factory = new CelestialBodiesFactory(new CelestialBodyType[20]);
@@ -34,11 +28,8 @@ namespace CelestialBodiesFlyweight.UnitTest
             bool request = celestialBody1.CompareType(celestialBody2);
             Assert.IsTrue(request);
         }
-        /*
-        Este test comprueba que la fabrica produce 2 tipos diferentes y los compara.
-        */
         [TestMethod]
-        public void TestFactoryCelestialBodiesTypeTest3()
+        public void TestCompareMedianPlanetWithDwarfSun()
         {
             string[] colors1 = {"ff0000", "0000ff"};
             string[] colors2 = {"ff0000","00ff00" ,"0000ff"};
